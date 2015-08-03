@@ -6,7 +6,7 @@ Created on Jul 6, 2015
 import pymel.core as pc
 
 from uiContainer import uic
-from PyQt4.QtGui import QMessageBox, QFileDialog, qApp, QPushButton, QRadioButton
+from PyQt4.QtGui import QMessageBox, QFileDialog, qApp, QPushButton, QRadioButton, QDialog
 import os
 import re
 import cui
@@ -54,6 +54,8 @@ class FPSDialog(Form, Base):
             if fps in key:
                 val = qutil.FPS_MAPPINGS[key]
                 pc.currentUnit(time=val)
+                pc.optionVar(sv=("workingUnitTime", val))
+                pc.optionVar(sv=("workingUnitTimeDefault", val))
                 break
         self.close()
 
