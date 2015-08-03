@@ -94,5 +94,22 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>53</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>65</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
